@@ -373,7 +373,7 @@ const Services = () => {
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
-                © 2024 WebDev Pro. Tous droits réservés.
+                © 2025 Creation Site Web Pro. Tous droits réservés.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="/mentions-legales" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-300">
