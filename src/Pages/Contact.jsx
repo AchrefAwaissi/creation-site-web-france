@@ -9,7 +9,6 @@ export default function Contact() {
   });
 
   const [status, setStatus] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,19 +25,7 @@ export default function Contact() {
       return;
     }
 
-    setIsLoading(true);
-    setStatus('');
-
-    // Simulation d'envoi - remplace par ton vrai EmailJS
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ from_name: '', phone: '', message: '' });
-      setIsLoading(false);
-      
-      // Reset status after 5 seconds
-      setTimeout(() => setStatus(''), 5000);
-    }, 2000);
-
+    setStatus('loading');
 
     emailjs.send(
       'service_b9udk6s',     // Ton Service ID
@@ -49,14 +36,17 @@ export default function Contact() {
     .then(() => {
       setStatus('success');
       setFormData({ from_name: '', phone: '', message: '' });
-      setIsLoading(false);
+      
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus(''), 5000);
     })
     .catch((error) => {
       console.error('Erreur EmailJS:', error);
       setStatus('error');
-      setIsLoading(false);
+      
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus(''), 5000);
     });
-  
   };
 
   return (
@@ -115,14 +105,21 @@ export default function Contact() {
 
             <button
               onClick={sendEmail}
-              disabled={status.includes('⏳')}
+              disabled={status === 'loading'}
               className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center space-x-2 disabled:cursor-not-allowed disabled:transform-none"
             >
-              <span>Envoyer le message</span>
+              {status === 'loading' ? (
+                <>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <span>Envoi en cours...</span>
+                </>
+              ) : (
+                <span>Envoyer le message</span>
+              )}
             </button>
 
             {/* Status Message */}
-            {status && (
+            {status && status !== 'loading' && (
               <div className="text-center">
                 {status === 'success' ? (
                   <div className="flex items-center justify-center space-x-2 p-4 bg-green-50 border border-green-200 rounded-xl">

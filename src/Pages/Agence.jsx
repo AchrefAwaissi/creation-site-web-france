@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Users, Coffee, Clock, Heart, Target, Sparkles, Zap, Shield } from 'lucide-react';
 
 const Agence = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const stats = [
     { number: "6+", label: "Sites créés", icon: <Target className="w-6 h-6" /> },
     { number: "6+", label: "Années d'expérience", icon: <Clock className="w-6 h-6" /> },

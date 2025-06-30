@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Store, Globe, Palette, Zap, Wrench, Heart } from 'lucide-react';
 
 const Services = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const services = [
     {
       icon: <Globe className="w-8 h-8" />,
