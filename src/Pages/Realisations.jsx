@@ -196,7 +196,7 @@ export default function Realisations() {
               <img 
                 key={index}
                 src={img} 
-                alt={`${project.title} - Image ${index + 1}`}
+                alt={`${project.title} - Vue ${index + 1}`}
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
                   index === currentImageIndex 
                     ? 'opacity-100 scale-100' 
@@ -263,7 +263,7 @@ export default function Realisations() {
               <img 
                 key={index}
                 src={img} 
-                alt={`${project.title} - Image ${index + 1}`}
+                alt={`${project.title} - Vue ${index + 1}`}
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
                   index === currentIndex 
                     ? 'opacity-100 scale-100' 
@@ -327,17 +327,17 @@ export default function Realisations() {
         <div className="relative w-full h-full group">
           <div className="relative w-full h-full overflow-hidden">
             {project.images.map((img, index) => {
-              // Pour la première image WordPress, on applique l'animation de scroll
+              // Pour la première WordPress, on applique l'animation de scroll
               if (index === 0 && index === currentIndex) {
                 return (
                   <div key={index} className="absolute inset-0 w-full h-full overflow-hidden bg-gray-100">
                     <img 
                       src={img} 
-                      alt={`${project.title} - Image ${index + 1}`}
+                      alt={`${project.title} - Vue ${index + 1}`}
                       className="w-full h-auto min-h-full object-cover object-top transition-transform duration-75 ease-linear"
                       style={{
                         transform: `translateY(-${wordpressScrollPosition}%)`,
-                        minHeight: '200%' // Image plus grande pour permettre le scroll
+                        minHeight: '200%' // Plus grande pour permettre le scroll
                       }}
                     />
                     {/* Indicateur de scroll */}
@@ -347,12 +347,12 @@ export default function Realisations() {
                   </div>
                 );
               } else {
-                // Pour les autres images, affichage normal
+                // Pour les autres, affichage normal
                 return (
                   <img 
                     key={index}
                     src={img} 
-                    alt={`${project.title} - Image ${index + 1}`}
+                    alt={`${project.title} - Vue ${index + 1}`}
                     className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
                       index === currentIndex 
                         ? 'opacity-100 scale-100' 
@@ -421,7 +421,7 @@ export default function Realisations() {
               <img 
                 key={index}
                 src={img} 
-                alt={`${project.title} - Image ${index + 1}`}
+                alt={`${project.title} - Vue ${index + 1}`}
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
                   index === currentIndex 
                     ? 'opacity-100 scale-100' 
@@ -479,7 +479,7 @@ export default function Realisations() {
         </div>
       );
     } else {
-      // Image simple pour les autres projets
+      // Simple pour les autres projets
       return (
         <img 
           src={project.image} 

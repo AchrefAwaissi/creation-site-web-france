@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Award, Users, Coffee, Clock, Heart, Target, Sparkles, Zap, Shield } from 'lucide-react';
+import { Users, Coffee, Clock, Heart, Target, Sparkles, Zap, Shield } from 'lucide-react';
 
 const Agence = () => {
   const [isScrolled, setIsScrolled] = useState(false);
