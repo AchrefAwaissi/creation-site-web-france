@@ -76,7 +76,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Section d'introduction améliorée */}
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
- 
+            <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full mb-6">
+              <span className="text-purple-600 text-sm font-medium">✨ Services Premium</span>
+            </div>
             
             <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-6">
               Nos <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-medium">Services</span>
@@ -140,17 +142,6 @@ export default function Home() {
 
       {/* Footer amélioré */}
       <Footer handleContact={handleContact} handleQuote={handleQuote} />
-    </div>
-  );
-}
-
-function StatCard({ number, label }) {
-  return (
-    <div className="text-center">
-      <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-1">
-        {number}
-      </div>
-      <div className="text-sm text-gray-600">{label}</div>
     </div>
   );
 }
@@ -411,7 +402,7 @@ function Footer({ handleContact, handleQuote }) {
           <div className="md:col-span-2">
             <div className="mb-6">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Creationsite
+                MakStarWeb
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -457,7 +448,7 @@ function Footer({ handleContact, handleQuote }) {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Creationsite. Tous droits réservés.
+            © 2025 MakStarWeb. Tous droits réservés.
           </p>
         </div>
       </div>
