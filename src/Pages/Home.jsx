@@ -189,9 +189,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Section d'introduction améliorée */}
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full mb-6">
-              <span className="text-purple-600 text-sm font-medium">✨ Services Premium</span>
-            </div>
+ 
             
             <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-6">
               Nos <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-medium">Services</span>
