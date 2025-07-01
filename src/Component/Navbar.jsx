@@ -47,7 +47,7 @@ export default function Navbar() {
               </div>
               
               <span className="text-2xl font-bold text-gray-800 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                MakStarweb
+                Creationsite
               </span>
             </button>
           </div>

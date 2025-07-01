@@ -308,7 +308,7 @@ const Ressources = () => {
             <div className="md:col-span-2">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                MakStarWeb
+                Creationsite
                 </h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -386,7 +386,7 @@ const Ressources = () => {
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
-                © 2024 WebDev Pro. Tous droits réservés.
+                © 2025 Creation Site Web Pro. Tous droits réservés.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="/mentions-legales" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-300">

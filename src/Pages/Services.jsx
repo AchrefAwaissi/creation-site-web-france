@@ -296,7 +296,7 @@ const Services = () => {
             <div className="md:col-span-2">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                MakStarWeb
+                Creationsite
                 </h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
